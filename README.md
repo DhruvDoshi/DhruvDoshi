@@ -1,4 +1,4 @@
-### Hi there, I'm Dhruv Doshi[website] 👋
+### Hi there, I'm [Dhruv Doshi][website] 👋
 
 ## I'm a Learner, Student, Freelancer, Developer, and Tutor!
 - 🔭 I’m currently working on a [Complete Blockchain Tutorials][youtube]!
