@@ -49,11 +49,6 @@
 
 ### 📕 Latest Blog Posts
 <!-- BLOG-POST-LIST:START -->
-- [Microsoft Student Partners (Ambassadors) – Geek is the new rockstar](https://www.gautamkrishnar.com/microsoft-student-partners/)
-- [An Intro to NumPy](https://www.gautamkrishnar.com/an-intro-to-numpy/)
-- [Lessons from an attack](https://www.gautamkrishnar.com/lessons-from-an-attack/)
-- [A guide to GitHub CLI](https://www.gautamkrishnar.com/a-guide-to-github-cli/)
-- [Accelerate your startup with the support of big companies!](https://www.gautamkrishnar.com/accelerate-your-startup/)
 <!-- BLOG-POST-LIST:END -->
 
 ---
@@ -63,8 +58,7 @@
 [website]: https://dhruvdoshi.github.io
 [twitter]: https://twitter.com/dhruv25071999
 [youtube]: https://youtube.com/DhruvDoshi
-[instagram]: https://instagram.com/codeSTACKr
-[linkedin]: https://linkedin.com/in/codeSTACKr
+[linkedin]: https://linkedin.com/in/dhruvdoshi25071999/
 [webdevplaylist]: https://www.youtube.com/playlist?list=PLkwxH9e_vrAJ0WbEsFA9W3I1W-g_BTsbt
 [jsplaylist]: https://www.youtube.com/playlist?list=PLkwxH9e_vrALRJKu7wfXby3MKeflhTu6B
 [cssplaylist]: https://www.youtube.com/playlist?list=PLkwxH9e_vrALSdvZuEh6gqQdmDoDIoqz4
