@@ -18,7 +18,7 @@
 <br />
 
 
-<img align="left" alt="Dhruv Doshi Github Stats" src="https://github-readme-stats.vercel.app/api?username=DhruvDoshi&count_private=true&show_icons=true&hide_border=true" />
+<img align="left" alt="Dhruv Doshi Github Stats" src="https://github-readme-stats.vercel.app/api?username=DhruvDoshi&count_private=true&show_icons=true&hide_border=true" color="black"/>
 
 
 [website]: https://dhruvdoshi.github.io
