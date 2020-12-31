@@ -52,7 +52,7 @@
 
 [website]: https://dhruvdoshi.github.io
 [twitter]: https://twitter.com/dhruv25071999
-[youtube]: https://youtube.com/DhruvDoshi
+[youtube]: https://www.youtube.com/channel/UC6WDZo0Eleak3VGdi8kSR1Q
 [linkedin]: https://linkedin.com/in/dhruvdoshi25071999/
 [webdevplaylist]: https://www.youtube.com/playlist?list=PLkwxH9e_vrAJ0WbEsFA9W3I1W-g_BTsbt
 [jsplaylist]: https://www.youtube.com/playlist?list=PLkwxH9e_vrALRJKu7wfXby3MKeflhTu6B
