@@ -36,22 +36,11 @@
 
 ## Connect with me:
 
-<!-- [<img align="left" alt="dhruvdoshi.github.io" width="20px" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg" />][website]
+[<img align="left" alt="dhruvdoshi.github.io" width="20px" src="https://freeicons.io/commonly-used-icons-3/website-icon-27043" />][website]
 [<img align="left" alt="DhruvDoshi | YouTube" width="20px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/youtube.svg" />][youtube]
 [<img align="left" alt="DhruvDoshi | Twitter" width="20px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" />][twitter]
 [<img align="left" alt="DhruvDoshi | LinkedIn" width="20px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
 
- -->
-
-
-<p>
-    <a href=“https://dhruvdoshi.github.io” title=“Redirect to homepage”>
-        <img height="20" src="https://dhruvdoshi.github.io">
-    </a>
-    <a href=“https://twitter.com/dhruv25071999” title=“Redirect to homepage”>
-        <img height="20" src=“https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg”>
-    </a>
-</p>
 
 
 
