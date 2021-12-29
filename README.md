@@ -25,17 +25,17 @@
 <br />
 
 <p float ="left">
-    <img align="left" alt="Dhruv Doshi Github Stats" src="https://github-readme-stats.vercel.app/api/top-langs/?username=DhruvDoshi&layout=compact&theme=dracula&langs_count=8&hide_border=true" color="black"/>
-    <img align="left" alt="Dhruv Doshi Github Stats" src="https://github-readme-stats.vercel.app/api?username=DhruvDoshi&show_icons=true&hide_border=true&theme=dracula&show_icons=true&count_private=true" color="black"/>
+    <img align="left" alt="Dhruv Doshi Github Stats" src="https://github-readme-stats.vercel.app/api/top-langs/?username=DhruvDoshi&layout=compact&theme=dracula&langs_count=8&hide_border=true" color="black"/><!-- .element height="50%" width="50%" -->
+    <img align="right" alt="Dhruv Doshi Github Stats" src="https://github-readme-stats.vercel.app/api?username=DhruvDoshi&show_icons=true&hide_border=true&theme=dracula&show_icons=true&count_private=true" color="black"/><!-- .element height="50%" width="50%" -->
 </p>
 
-
+<!-- 
 ### Connect with me:
 
 [<img align="left" alt="dhruvdoshi.github.io" width="22px" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg" />][website]
 [<img align="left" alt="DhruvDoshi | YouTube" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/youtube.svg" />][youtube]
 [<img align="left" alt="DhruvDoshi | Twitter" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" />][twitter]
-[<img align="left" alt="DhruvDoshi | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
+[<img align="left" alt="DhruvDoshi | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin] -->
 
 [website]: https://dhruvdoshi.github.io
 [twitter]: https://twitter.com/dhruv25071999
