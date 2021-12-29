@@ -36,10 +36,26 @@
 
 ## Connect with me:
 
-[<img align="left" alt="dhruvdoshi.github.io" width="22px" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg" />][website]
-[<img align="left" alt="DhruvDoshi | YouTube" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/youtube.svg" />][youtube]
-[<img align="left" alt="DhruvDoshi | Twitter" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" />][twitter]
-[<img align="left" alt="DhruvDoshi | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
+<!-- [<img align="left" alt="dhruvdoshi.github.io" width="20px" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg" />][website]
+[<img align="left" alt="DhruvDoshi | YouTube" width="20px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/youtube.svg" />][youtube]
+[<img align="left" alt="DhruvDoshi | Twitter" width="20px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" />][twitter]
+[<img align="left" alt="DhruvDoshi | LinkedIn" width="20px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
+
+ -->
+
+
+<p>
+    <a href=“https://dhruvdoshi.github.io” title=“Redirect to homepage”>
+        <img src=“https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg” alt=“homepage” />
+    </a>
+    <a href=“https://twitter.com/dhruv25071999” title=“Redirect to homepage”>
+        <img src=“https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg” alt=“homepage” />
+    </a>
+</p>
+
+
+
+
 
 [website]: https://dhruvdoshi.github.io
 [twitter]: https://twitter.com/dhruv25071999
