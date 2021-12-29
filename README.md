@@ -24,6 +24,8 @@
 <br />
 <br />
 
+### Github Languages and Status
+
 <p float ="left">
     <img alt="Dhruv Doshi Github Stats" src="https://github-readme-stats.vercel.app/api/top-langs/?username=DhruvDoshi&layout=compact&theme=dracula&langs_count=8&hide_border=true" color="black" width="40%"/><!-- .element height="50%" width="50%" -->
     <img alt="Github" src="https://github-readme-stats.vercel.app/api?username=DhruvDoshi&show_icons=true&hide_border=true&theme=dracula&show_icons=true&count_private=true" color="black" width="55%"/>
