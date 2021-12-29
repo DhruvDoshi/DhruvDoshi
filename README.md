@@ -24,18 +24,10 @@
 <br />
 <br />
 
-<img align="left" alt="Dhruv Doshi Github Stats" src="https://github-readme-stats.vercel.app/api/top-langs/?username=DhruvDoshi&layout=compact&theme=dracula&langs_count=8&hide_border=true" color="black"/><img align="left" alt="Dhruv Doshi Github Stats" src="https://github-readme-stats.vercel.app/api?username=DhruvDoshi&show_icons=true&hide_border=true&theme=dracula&show_icons=true&count_private=true" color="black"/>
-
-
-
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
+<p float ="left">
+    <img align="left" alt="Dhruv Doshi Github Stats" src="https://github-readme-stats.vercel.app/api/top-langs/?username=DhruvDoshi&layout=compact&theme=dracula&langs_count=8&hide_border=true" color="black"/>
+    <img align="left" alt="Dhruv Doshi Github Stats" src="https://github-readme-stats.vercel.app/api?username=DhruvDoshi&show_icons=true&hide_border=true&theme=dracula&show_icons=true&count_private=true" color="black"/>
+</p>
 
 
 ### Connect with me:
