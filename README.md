@@ -29,12 +29,12 @@
 </p>
 
 ### Connect with me:
-
-[<img align="left" alt="dhruvdoshi.github.io" width="22px" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg" />][website]
-[<img align="left" alt="DhruvDoshi | YouTube" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/youtube.svg" />][youtube]
-[<img align="left" alt="DhruvDoshi | Twitter" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" />][twitter]
-[<img align="left" alt="DhruvDoshi | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
-
+<p float="left">
+    [<img align="left" alt="dhruvdoshi.github.io" width="22px" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg" />][website]
+    [<img align="left" alt="DhruvDoshi | YouTube" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/youtube.svg" />][youtube]
+    [<img align="left" alt="DhruvDoshi | Twitter" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" />][twitter]
+    [<img align="left" alt="DhruvDoshi | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
+</p>
 [website]: https://dhruvdoshi.github.io
 [twitter]: https://twitter.com/dhruv25071999
 [youtube]: https://www.youtube.com/channel/UC6WDZo0Eleak3VGdi8kSR1Q
