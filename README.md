@@ -29,8 +29,8 @@
 </p>
 
 ## Top Blog Posts
- - [Intorduction to Cloud Computing](https://dhruvdoshi.github.io/blog/2021/02/25/what-is-cloud-computing)
- - [Intorduction to Cryptocurrency](https://dhruvdoshi.github.io/blog/2021/01/31/what-is-cryptocurrency)
+ - [Complete Information about Cloud Computing](https://dhruvdoshi.github.io/blog/2021/02/25/what-is-cloud-computing)
+ - [Complete Information about Cryptocurrency](https://dhruvdoshi.github.io/blog/2021/01/31/what-is-cryptocurrency)
  - [Introduction to Blockchain](https://dhruvdoshi.github.io/blog/2019/08/31/what-is-blockchain)
 
 
