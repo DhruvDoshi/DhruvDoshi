@@ -43,6 +43,7 @@
 [<img align="left" alt="DhruvDoshi | Quora" width="20px" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/quora-svgrepo-com.svg" />][quora]
 [<img align="left" alt="DhruvDoshi | Google" width="20px" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/google-scholar-svgrepo-com.svg" />][google-scholar]
 [<img align="left" alt="DhruvDoshi | Research" width="20px" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/researchgate-svgrepo-com.svg" />][research-gate]
+[<img align="left" alt="DhruvDoshi | Blogs" width="20px" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/blogging-writer-svgrepo-com.svg" />][blogs]
 
 
 
@@ -57,3 +58,4 @@
 [quora]: https://www.quora.com/profile/Dhruv-Doshi-18
 [google-scholar]: https://scholar.google.com/citations?user=Ri3ZDcIAAAAJ&hl=en
 [research-gate]: https://www.researchgate.net/profile/Dhruv-Doshi-4
+[blogs]: https://dhruvdoshi.github.io/blog
