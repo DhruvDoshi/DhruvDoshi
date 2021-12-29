@@ -1,12 +1,12 @@
-## Hi there, I'm [Dhruv Doshi][website] 👋
+# Hi there, I'm [Dhruv Doshi][website] 👋
 
-### I'm a Learner, Student, Freelancer, Developer, and Tutor!
+## I'm a Learner, Student, Freelancer, Developer, and Tutor!
 - 🌱 I’m currently learning everything
 - 👯 I’m looking to collaborate with other content creators
 - 🥅 2022 Goals: Contribute more to Open Source projects
 - ⚡ Fun fact: I love to watch cricket and hate instagram
 
-### Languages and Tools
+## Languages and Tools
 <p float ="left">
     <img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png">
     <img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/java/java.png">
@@ -21,14 +21,20 @@
     <img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/angular/angular.png">
 </p>
 
-### Github Languages and Status
+## Github Languages and Status
 
 <p float ="left">
     <img alt="Dhruv Doshi Github Stats" src="https://github-readme-stats.vercel.app/api/top-langs/?username=DhruvDoshi&layout=compact&theme=dracula&langs_count=8&hide_border=true" color="black" width="40%"/><!-- .element height="50%" width="50%" -->
     <img alt="Github" src="https://github-readme-stats.vercel.app/api?username=DhruvDoshi&show_icons=true&hide_border=true&theme=dracula&show_icons=true&count_private=true" color="black" width="55%"/>
 </p>
 
-### Connect with me:
+## Top Blog Posts
+ - [Intorduction to Cloud Computing](https://dhruvdoshi.github.io/blog/2021/02/25/what-is-cloud-computing)
+ - [Intorduction to Cryptocurrency](https://dhruvdoshi.github.io/blog/2021/01/31/what-is-cryptocurrency)
+ - [Introduction to Blockchain](https://dhruvdoshi.github.io/blog/2019/08/31/what-is-blockchain)
+
+
+## Connect with me:
 
 [<img align="left" alt="dhruvdoshi.github.io" width="22px" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg" />][website]
 [<img align="left" alt="DhruvDoshi | YouTube" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/youtube.svg" />][youtube]
