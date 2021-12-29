@@ -46,10 +46,10 @@
 
 <p>
     <a href=“https://dhruvdoshi.github.io” title=“Redirect to homepage”>
-        <img src=“https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg” alt=“homepage” />
+        <img height="20" src=“https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg”>
     </a>
     <a href=“https://twitter.com/dhruv25071999” title=“Redirect to homepage”>
-        <img src=“https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg” alt=“homepage” />
+        <img height="20" src=“https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg”>
     </a>
 </p>
 
