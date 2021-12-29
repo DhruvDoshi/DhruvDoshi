@@ -37,9 +37,13 @@
 ## Connect with me:
 
 [<img align="left" alt="dhruvdoshi.github.io" width="20px" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/about-svgrepo-com.svg" />][website]
-[<img align="left" alt="DhruvDoshi | YouTube" width="20px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/youtube.svg" />][youtube]
-[<img align="left" alt="DhruvDoshi | Twitter" width="20px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" />][twitter]
-[<img align="left" alt="DhruvDoshi | LinkedIn" width="20px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
+[<img align="left" alt="DhruvDoshi | YouTube" width="20px" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/youtube-svgrepo-com-2.svg" />][youtube]
+[<img align="left" alt="DhruvDoshi | Twitter" width="20px" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/twitter-svgrepo-com.svg" />][twitter]
+[<img align="left" alt="DhruvDoshi | LinkedIn" width="20px" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/linkedin-svgrepo-com.svg" />][linkedin]
+[<img align="left" alt="DhruvDoshi | Quora" width="20px" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/quora-svgrepo-com.svg" />][quora]
+[<img align="left" alt="DhruvDoshi | Google" width="20px" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/google-scholar-svgrepo-com.svg" />][google-scholar]
+[<img align="left" alt="DhruvDoshi | Research" width="20px" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/researchgate-svgrepo-com.svg" />][research-gate]
+
 
 
 
@@ -50,3 +54,6 @@
 [twitter]: https://twitter.com/dhruv25071999
 [youtube]: https://www.youtube.com/channel/UC6WDZo0Eleak3VGdi8kSR1Q
 [linkedin]: https://linkedin.com/in/dhruvdoshi25071999/
+[quora]: https://www.quora.com/profile/Dhruv-Doshi-18
+[google-scholar]: https://scholar.google.com/citations?user=Ri3ZDcIAAAAJ&hl=en
+[research-gate]: https://www.researchgate.net/profile/Dhruv-Doshi-4
