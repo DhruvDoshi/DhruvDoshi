@@ -36,7 +36,7 @@
 
 ## Connect with me:
 
-[<img align="left" alt="dhruvdoshi.github.io" width="20px" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/website.png" />][website]
+[<img align="left" alt="dhruvdoshi.github.io" width="20px" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/website1.png" />][website]
 [<img align="left" alt="DhruvDoshi | YouTube" width="20px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/youtube.svg" />][youtube]
 [<img align="left" alt="DhruvDoshi | Twitter" width="20px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" />][twitter]
 [<img align="left" alt="DhruvDoshi | LinkedIn" width="20px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
