@@ -28,7 +28,7 @@
     <img height="20" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/pipr-removebg-preview.png">
     <img height="20" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/git-svgrepo-com.svg">
     <img height="20" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/microsoft-azure-seeklogo.com.svg">
-    <img height="20" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/aws-svgrepo-com.svg">
+    <img height="20" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/png-transparent-amazon-com-logo-amazon-web-services-amazon-elastic-compute-cloud-amazon-virtual-private-cloud-cloud-computing-text-orange-logo-removebg-preview.png">
     <img height="20" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/google-cloud-svgrepo-com.svg">
     <img height="20" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/docker-svgrepo-com.svg">
     <img height="20" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/kubernetes-svgrepo-com.svg">
