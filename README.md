@@ -26,6 +26,13 @@
     <img height="20" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/ruby-svgrepo-com.svg">
     <img height="25" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/go-svgrepo-com.svg">
     <img height="20" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/pipr-removebg-preview.png">
+    <img height="20" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/git-svgrepo-com.svg">
+    <img height="20" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/microsoft-azure-seeklogo.com.svg">
+    <img height="20" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/aws-svgrepo-com.svg">
+    <img height="20" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/google-cloud-svgrepo-com.svg">
+    <img height="20" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/docker-svgrepo-com.svg">
+    <img height="20" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/kubernetes-svgrepo-com.svg">
+    <img height="20" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/pipr-removebg-preview.png">
     <img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png">
     <img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/typescript/typescript.png">
     <img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png">    
