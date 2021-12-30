@@ -21,6 +21,7 @@
     <img height="20" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/pipr-removebg-preview.png">
     <img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/ethereum/ethereum.png">
     <img height="20" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/truffle-seeklogo.com.svg">
+    <img height="20" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/ganache-seeklogo.com.svg">
     <img height="20" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/pipr-removebg-preview.png">
     <img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png">
     <img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/typescript/typescript.png">
