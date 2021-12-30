@@ -23,8 +23,8 @@
     <img height="20" src="https://raw.githubusercontent.com/github/explore/180320cffc25f4ed1bbdfd33d4db3a66eeeeb358/topics/cpp/cpp.png">
     <img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/java/java.png">
     <img height="20" src="https://raw.githubusercontent.com/github/explore/8ab0be27a8c97992e4930e630e2d68ba8d819183/topics/spring/spring.png">
-    <img height="20" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/go-svgrepo-com.svg">
     <img height="20" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/ruby-svgrepo-com.svg">
+    <img height="25" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/go-svgrepo-com.svg">
     <img height="20" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/p5js.svg">
     <img height="20" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/pipr-removebg-preview.png">
     <img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png">
