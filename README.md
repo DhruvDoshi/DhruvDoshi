@@ -3,7 +3,7 @@
 ## I'm a Learner, Student, Freelancer, Developer, and Tutor!
 - 🌱 I’m currently learning everything
 - 👯 I’m looking to collaborate with other content creators
-- 🥅 2022 Goals: Contribute more to Open Source projects
+- 🥅 2025 Goals: Finish my Trading Engine
 - ⚡ Fun fact: I love to watch cricket and hate instagram
 
 ## Languages and Tools
