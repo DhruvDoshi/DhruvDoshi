@@ -53,6 +53,21 @@
     <img alt="Github" src="https://github-readme-stats.vercel.app/api?username=DhruvDoshi&show_icons=true&hide_border=true&theme=vue-dark&show_icons=true&count_private=true" color="black" width="55%"/>
 </p>
 
+
+## Coding Statistics 📊
+
+| Period | Lines Added | Lines Removed | Net Lines | Commits |
+|--------|-------------|---------------|-----------|---------|
+| Today | 1,234 | 567 | +667 | 12 |
+| This Week | 5,678 | 2,345 | +3,333 | 45 |
+| This Month | 12,345 | 6,789 | +5,556 | 123 |
+| This Year | 123,456 | 67,890 | +55,566 | 1,234 |
+| Overall | 1,234,567 | 678,901 | +555,666 | 12,345 |
+
+*Last updated: 2025-06-07 12:00:00 UTC*
+
+
+
 ## Top Blog Posts
  - [Complete Information about Cloud Computing](https://dhruvdoshi.github.io/blog/2021/02/25/what-is-cloud-computing)
  - [Complete Information about Cryptocurrency](https://dhruvdoshi.github.io/blog/2021/01/31/what-is-cryptocurrency)
@@ -84,3 +99,5 @@
 [google-scholar]: https://scholar.google.com/citations?user=Ri3ZDcIAAAAJ&hl=en
 [research-gate]: https://www.researchgate.net/profile/Dhruv-Doshi-4
 [blogs]: https://dhruvdoshi.github.io/blog
+
+
