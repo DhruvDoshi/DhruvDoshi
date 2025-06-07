@@ -28,10 +28,11 @@ class GitHubStatsGenerator:
         }
     
     def get_user_repos(self):
-        """Get all repositories for the user"""
+        """Get all repositories for the user including organizations"""
         repos = []
-        page = 1
         
+        # Get user's own repositories
+        page = 1
         while True:
             url = f'https://api.github.com/users/{self.username}/repos'
             params = {'page': page, 'per_page': 100, 'sort': 'updated', 'type': 'all'}
@@ -47,22 +48,36 @@ class GitHubStatsGenerator:
                 repos.extend(page_repos)
                 page += 1
                 
-                print(f"Fetched {len(repos)} repositories so far...")
-                
             except Exception as e:
-                print(f"Error fetching repos: {e}")
+                print(f"Error fetching user repos: {e}")
                 break
+        
+        # Get repositories from organizations where user has contributed
+        try:
+            url = f'https://api.github.com/user/repos'
+            params = {'type': 'all', 'per_page': 100, 'sort': 'updated'}
+            response = requests.get(url, headers=self.headers, params=params, timeout=30)
+            
+            if response.status_code == 200:
+                org_repos = response.json()
+                for repo in org_repos:
+                    if repo['full_name'] not in [r['full_name'] for r in repos]:
+                        repos.append(repo)
+        except Exception as e:
+            print(f"Error fetching org repos: {e}")
         
         print(f"Total repositories found: {len(repos)}")
         return repos
     
     def get_commit_activity(self, repo_full_name):
-        """Get commit activity for a repository"""
+        """Get commit activity for a repository with better pagination"""
         commits_data = []
         page = 1
-        since_date = (datetime.now() - timedelta(days=365)).isoformat()
         
-        while page <= 10:  # Limit pages to avoid rate limiting
+        # Get commits from the last 2 years for better overall stats
+        since_date = (datetime.now() - timedelta(days=730)).isoformat()
+        
+        while page <= 20:  # Increased page limit for better coverage
             url = f'https://api.github.com/repos/{repo_full_name}/commits'
             params = {
                 'author': self.username,
@@ -83,6 +98,8 @@ class GitHubStatsGenerator:
                 if not commits:
                     break
                 
+                print(f"  Processing page {page} with {len(commits)} commits...")
+                
                 for commit in commits:
                     # Get detailed commit info
                     commit_detail = self.get_commit_details(repo_full_name, commit['sha'])
@@ -93,6 +110,10 @@ class GitHubStatsGenerator:
                         })
                 
                 page += 1
+                
+                # Add small delay to avoid rate limiting
+                import time
+                time.sleep(0.1)
                 
             except Exception as e:
                 print(f"Error fetching commits for {repo_full_name}: {e}")
@@ -121,7 +142,46 @@ class GitHubStatsGenerator:
             print(f"Error fetching commit details: {e}")
             return None
     
-    def categorize_by_time(self, commit_date_str):
+    def get_contribution_calendar(self):
+        """Get contribution data using GraphQL API for more comprehensive stats"""
+        query = """
+        query($username: String!) {
+          user(login: $username) {
+            contributionsCollection {
+              contributionCalendar {
+                totalContributions
+                weeks {
+                  contributionDays {
+                    contributionCount
+                    date
+                  }
+                }
+              }
+            }
+          }
+        }
+        """
+        
+        url = 'https://api.github.com/graphql'
+        headers = {**self.headers, 'Accept': 'application/vnd.github.v4+json'}
+        
+        try:
+            response = requests.post(
+                url, 
+                json={'query': query, 'variables': {'username': self.username}},
+                headers=headers,
+                timeout=30
+            )
+            
+            if response.status_code == 200:
+                data = response.json()
+                calendar = data['data']['user']['contributionsCollection']['contributionCalendar']
+                print(f"📈 GitHub shows total contributions: {calendar['totalContributions']}")
+                return calendar
+        except Exception as e:
+            print(f"GraphQL query failed: {e}")
+        
+        return None
         """Determine which time categories this commit falls into"""
         try:
             commit_date = parser.parse(commit_date_str)
@@ -161,18 +221,21 @@ class GitHubStatsGenerator:
         
         repos = self.get_user_repos()
         
-        # Limit to most recently updated repos to avoid rate limiting
-        active_repos = sorted(repos, key=lambda x: x.get('updated_at', ''), reverse=True)[:30]
+        # Process all repos, not just limited ones for better overall stats
+        active_repos = sorted(repos, key=lambda x: x.get('updated_at', ''), reverse=True)
+        
+        print(f"Will analyze {len(active_repos)} repositories...")
         
         for i, repo in enumerate(active_repos):
             repo_name = repo['full_name']
-            print(f"Analyzing repository {i+1}/{len(active_repos)}: {repo_name}")
+            print(f"\nAnalyzing repository {i+1}/{len(active_repos)}: {repo_name}")
             
             if repo.get('size', 0) == 0:  # Skip empty repos
+                print("  Skipping empty repository")
                 continue
             
             commits = self.get_commit_activity(repo_name)
-            print(f"Found {len(commits)} commits in {repo['name']}")
+            print(f"  Found {len(commits)} commits in {repo['name']}")
             
             for commit in commits:
                 categories = self.categorize_by_time(commit['date'])
@@ -182,19 +245,26 @@ class GitHubStatsGenerator:
                     self.stats[category]['additions'] += stats['additions']
                     self.stats[category]['deletions'] += stats['deletions']
                     self.stats[category]['commits'] += 1
+            
+            # Show progress
+            if (i + 1) % 5 == 0:
+                print(f"\n📊 Progress Update - Processed {i+1} repos:")
+                print(f"   Overall: {self.stats['overall']['commits']} commits, +{self.stats['overall']['additions']} -{self.stats['overall']['deletions']}")
+        
+        print(f"\n🎯 Analysis complete! Processed {len(active_repos)} repositories.")
     
     def format_number(self, num):
         """Format number with commas for readability"""
         return f"{num:,}"
     
     def generate_stats_table(self):
-        """Generate markdown table with statistics"""
+        """Generate properly formatted markdown table with statistics"""
         current_time = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S UTC')
         
-        table = """## Coding Statistics 📊
-
-| Period | Lines Added | Lines Removed | Net Lines | Commits |
-|--------|-------------|---------------|-----------|---------|"""
+        # Start with proper markdown table formatting
+        table = "## Coding Statistics 📊\n\n"
+        table += "| Period | Lines Added | Lines Removed | Net Lines | Commits |\n"
+        table += "|--------|-------------|---------------|-----------|---------|\n"
         
         periods = {
             'today': 'Today',
@@ -209,10 +279,10 @@ class GitHubStatsGenerator:
             net_lines = stats['additions'] - stats['deletions']
             net_sign = '+' if net_lines >= 0 else ''
             
-            row = f"| {label} | {self.format_number(stats['additions'])} | {self.format_number(stats['deletions'])} | {net_sign}{self.format_number(net_lines)} | {self.format_number(stats['commits'])} |"
-            table += f"\n{row}"
+            # Properly format each cell with spaces
+            table += f"| {label} | {self.format_number(stats['additions'])} | {self.format_number(stats['deletions'])} | {net_sign}{self.format_number(net_lines)} | {self.format_number(stats['commits'])} |\n"
         
-        table += f"\n\n*Last updated: {current_time}*\n"
+        table += f"\n*Last updated: {current_time}*\n"
         return table
     
     def update_readme(self):
@@ -272,18 +342,30 @@ class GitHubStatsGenerator:
         print(f"📊 Analyzing repositories for: {self.username}")
         
         try:
+            # Get contribution calendar for reference
+            calendar = self.get_contribution_calendar()
+            
+            # Analyze repositories
             self.analyze_repositories()
             
             print("\n📈 Final Statistics Summary:")
             for period, stats in self.stats.items():
                 net = stats['additions'] - stats['deletions']
                 print(f"  {period.capitalize()}: {stats['commits']} commits, "
-                      f"+{stats['additions']} -{stats['deletions']} = {net:+} net lines")
+                      f"+{self.format_number(stats['additions'])} -{self.format_number(stats['deletions'])} = {net:+,} net lines")
+            
+            # If stats seem low, warn user
+            if self.stats['overall']['commits'] < 100:
+                print("\n⚠️  Warning: Statistics seem low. This might be due to:")
+                print("   - GitHub API rate limiting")
+                print("   - Private repositories not accessible") 
+                print("   - Recent commits not yet indexed")
             
             success = self.update_readme()
             
             if success:
                 print("\n✅ Process completed successfully!")
+                print("📝 README.md has been updated with latest statistics")
             else:
                 print("\n❌ Failed to update README.md")
                 
