@@ -58,16 +58,13 @@
 
 | Period | Lines Added | Lines Removed | Net Lines | Commits |
 |--------|-------------|---------------|-----------|---------|
-| Today | 1,234 | 567 | +667 | 12 |
-| This Week | 5,678 | 2,345 | +3,333 | 45 |
-| This Month | 12,345 | 6,789 | +5,556 | 123 |
-| This Year | 123,456 | 67,890 | +55,566 | 1,234 |
-| Overall | 1,234,567 | 678,901 | +555,666 | 12,345 |
+| Today | 0 | 0 | +0 | 0 |
+| This Week | 0 | 0 | +0 | 0 |
+| This Month | 0 | 0 | +0 | 0 |
+| This Year | 0 | 0 | +0 | 0 |
+| Overall | 0 | 0 | +0 | 0 |
 
-*Last updated: 2025-06-07 12:00:00 UTC*
-
-
-
+*Last updated: 2025-06-07 20:54:20 UTC*
 ## Top Blog Posts
  - [Complete Information about Cloud Computing](https://dhruvdoshi.github.io/blog/2021/02/25/what-is-cloud-computing)
  - [Complete Information about Cryptocurrency](https://dhruvdoshi.github.io/blog/2021/01/31/what-is-cryptocurrency)
