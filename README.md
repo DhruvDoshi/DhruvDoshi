@@ -54,17 +54,6 @@
 </p>
 
 
-## Coding Statistics 📊
-
-| Period | Lines Added | Lines Removed | Net Lines | Commits |
-|--------|-------------|---------------|-----------|---------|
-| Today | 487 | 125 | +362 | 2 |
-| This Week | 487 | 125 | +362 | 2 |
-| This Month | 7,812 | 128 | +7,684 | 5 |
-| This Year | 11,826 | 821 | +11,005 | 19 |
-| Overall | 11,826 | 821 | +11,005 | 19 |
-
-*Last updated: 2025-06-07 20:57:01 UTC*
 ## Top Blog Posts
  - [Complete Information about Cloud Computing](https://dhruvdoshi.github.io/blog/2021/02/25/what-is-cloud-computing)
  - [Complete Information about Cryptocurrency](https://dhruvdoshi.github.io/blog/2021/01/31/what-is-cryptocurrency)
