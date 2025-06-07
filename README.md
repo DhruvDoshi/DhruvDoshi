@@ -53,6 +53,19 @@
     <img alt="Github" src="https://github-readme-stats.vercel.app/api?username=DhruvDoshi&show_icons=true&hide_border=true&theme=vue-dark&show_icons=true&count_private=true" color="black" width="55%"/>
 </p>
 
+## Coding Statistics 📊
+
+| Period | Lines Added | Lines Removed | Net Lines | Commits |
+|--------|-------------|---------------|-----------|---------|
+| Today | 487 | 136 | +351 | 3 |
+| This Week | 487 | 136 | +351 | 3 |
+| This Month | 7,812 | 139 | +7,673 | 6 |
+| This Year | 11,826 | 832 | +10,994 | 20 |
+| Overall | 11,826 | 832 | +10,994 | 20 |
+
+*Last updated: 2025-06-07 20:58:51 UTC*
+
+
 
 ## Top Blog Posts
  - [Complete Information about Cloud Computing](https://dhruvdoshi.github.io/blog/2021/02/25/what-is-cloud-computing)
