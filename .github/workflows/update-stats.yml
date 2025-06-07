@@ -2,9 +2,9 @@ name: Update Coding Statistics
 
 on:
   schedule:
-    # Run every day at 00:00 UTC
+    # Run every day at 00:00 UTC (24 hours)
     - cron: '0 0 * * *'
-  workflow_dispatch: # Allow manual trigger
+  workflow_dispatch: # Allow manual trigger from Actions tab
   push:
     branches: [ master, main ]
 
@@ -17,7 +17,7 @@ jobs:
       uses: actions/checkout@v4
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
-        fetch-depth: 0 # Fetch full history
+        fetch-depth: 0
     
     - name: Set up Python
       uses: actions/setup-python@v4
@@ -27,22 +27,22 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install requests python-dateutil pytz
+        pip install requests python-dateutil
     
     - name: Run stats generator
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        GITHUB_USERNAME: ${{ github.repository_owner }}
+        GITHUB_USERNAME: DhruvDoshi
       run: python .github/scripts/update_stats.py
     
     - name: Commit and push changes
       run: |
         git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add .
+        git config --local user.name "GitHub Action Bot"
+        git add README.md
         if git diff --staged --quiet; then
           echo "No changes to commit"
         else
-          git commit -m "🔄 Auto-update coding statistics"
+          git commit -m "📊 Auto-update coding statistics [$(date +'%Y-%m-%d %H:%M:%S UTC')]"
           git push
         fi

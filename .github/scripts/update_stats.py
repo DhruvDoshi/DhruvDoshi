@@ -1,23 +1,23 @@
 #!/usr/bin/env python3
 """
-GitHub Coding Statistics Generator
-Analyzes commit history and generates coding statistics for README
+GitHub Coding Statistics Generator for DhruvDoshi
+Updates README.md with coding statistics automatically
 """
 
 import os
-import json
 import requests
-from datetime import datetime, timedelta
 import re
-from collections import defaultdict
+from datetime import datetime, timedelta
+from dateutil import parser
 
 class GitHubStatsGenerator:
     def __init__(self):
         self.token = os.environ.get('GITHUB_TOKEN')
-        self.username = os.environ.get('GITHUB_USERNAME')
+        self.username = os.environ.get('GITHUB_USERNAME', 'DhruvDoshi')
         self.headers = {
             'Authorization': f'token {self.token}',
-            'Accept': 'application/vnd.github.v3+json'
+            'Accept': 'application/vnd.github.v3+json',
+            'User-Agent': 'GitHubStatsBot'
         }
         self.stats = {
             'today': {'additions': 0, 'deletions': 0, 'commits': 0},
@@ -27,49 +27,43 @@ class GitHubStatsGenerator:
             'overall': {'additions': 0, 'deletions': 0, 'commits': 0}
         }
     
-    def get_repositories(self):
-        """Get all repositories for the user including organizations"""
+    def get_user_repos(self):
+        """Get all repositories for the user"""
         repos = []
         page = 1
         
         while True:
-            # Get user repos
-            url = f'https://api.github.com/user/repos?page={page}&per_page=100&sort=updated'
-            response = requests.get(url, headers=self.headers)
+            url = f'https://api.github.com/users/{self.username}/repos'
+            params = {'page': page, 'per_page': 100, 'sort': 'updated', 'type': 'all'}
             
-            if response.status_code != 200:
-                print(f"Error fetching repos: {response.status_code}")
-                break
+            try:
+                response = requests.get(url, headers=self.headers, params=params, timeout=30)
+                response.raise_for_status()
                 
-            page_repos = response.json()
-            if not page_repos:
-                break
+                page_repos = response.json()
+                if not page_repos:
+                    break
+                    
+                repos.extend(page_repos)
+                page += 1
                 
-            repos.extend(page_repos)
-            page += 1
+                print(f"Fetched {len(repos)} repositories so far...")
+                
+            except Exception as e:
+                print(f"Error fetching repos: {e}")
+                break
         
-        # Filter repos where user has pushed commits
-        return [repo for repo in repos if not repo['fork'] or self.has_contributions(repo)]
+        print(f"Total repositories found: {len(repos)}")
+        return repos
     
-    def has_contributions(self, repo):
-        """Check if user has contributions to this repo"""
-        url = f"https://api.github.com/repos/{repo['full_name']}/stats/contributors"
-        response = requests.get(url, headers=self.headers)
-        
-        if response.status_code == 200:
-            contributors = response.json()
-            if contributors:
-                return any(contrib['author']['login'] == self.username for contrib in contributors)
-        return False
-    
-    def get_commits_for_repo(self, repo_name):
-        """Get commits for a specific repository"""
-        commits = []
+    def get_commit_activity(self, repo_full_name):
+        """Get commit activity for a repository"""
+        commits_data = []
         page = 1
         since_date = (datetime.now() - timedelta(days=365)).isoformat()
         
-        while True:
-            url = f'https://api.github.com/repos/{repo_name}/commits'
+        while page <= 10:  # Limit pages to avoid rate limiting
+            url = f'https://api.github.com/repos/{repo_full_name}/commits'
             params = {
                 'author': self.username,
                 'since': since_date,
@@ -77,95 +71,126 @@ class GitHubStatsGenerator:
                 'per_page': 100
             }
             
-            response = requests.get(url, headers=self.headers, params=params)
-            
-            if response.status_code != 200:
-                break
+            try:
+                response = requests.get(url, headers=self.headers, params=params, timeout=30)
                 
-            page_commits = response.json()
-            if not page_commits:
-                break
+                if response.status_code == 409:  # Empty repository
+                    break
+                    
+                response.raise_for_status()
+                commits = response.json()
                 
-            commits.extend(page_commits)
-            page += 1
-            
-            # Limit to avoid rate limiting
-            if len(commits) > 1000:
+                if not commits:
+                    break
+                
+                for commit in commits:
+                    # Get detailed commit info
+                    commit_detail = self.get_commit_details(repo_full_name, commit['sha'])
+                    if commit_detail:
+                        commits_data.append({
+                            'date': commit['commit']['author']['date'],
+                            'stats': commit_detail
+                        })
+                
+                page += 1
+                
+            except Exception as e:
+                print(f"Error fetching commits for {repo_full_name}: {e}")
                 break
         
-        return commits
+        return commits_data
     
-    def get_commit_stats(self, repo_name, commit_sha):
+    def get_commit_details(self, repo_full_name, sha):
         """Get detailed stats for a specific commit"""
-        url = f'https://api.github.com/repos/{repo_name}/commits/{commit_sha}'
-        response = requests.get(url, headers=self.headers)
+        url = f'https://api.github.com/repos/{repo_full_name}/commits/{sha}'
         
-        if response.status_code == 200:
+        try:
+            response = requests.get(url, headers=self.headers, timeout=30)
+            response.raise_for_status()
+            
             commit_data = response.json()
             stats = commit_data.get('stats', {})
+            
             return {
                 'additions': stats.get('additions', 0),
                 'deletions': stats.get('deletions', 0),
                 'total': stats.get('total', 0)
             }
-        return {'additions': 0, 'deletions': 0, 'total': 0}
+            
+        except Exception as e:
+            print(f"Error fetching commit details: {e}")
+            return None
     
-    def categorize_by_time(self, commit_date):
+    def categorize_by_time(self, commit_date_str):
         """Determine which time categories this commit falls into"""
-        commit_dt = datetime.fromisoformat(commit_date.replace('Z', '+00:00'))
-        now = datetime.now().replace(tzinfo=commit_dt.tzinfo)
-        
-        categories = []
-        
-        # Today (last 24 hours)
-        if (now - commit_dt).days == 0:
-            categories.append('today')
-        
-        # This week (last 7 days)
-        if (now - commit_dt).days < 7:
-            categories.append('week')
-        
-        # This month (last 30 days)
-        if (now - commit_dt).days < 30:
-            categories.append('month')
-        
-        # This year (last 365 days)
-        if (now - commit_dt).days < 365:
-            categories.append('year')
-        
-        # Overall (always true for processed commits)
-        categories.append('overall')
-        
-        return categories
+        try:
+            commit_date = parser.parse(commit_date_str)
+            now = datetime.now(commit_date.tzinfo)
+            
+            time_diff = now - commit_date
+            categories = []
+            
+            # Today (last 24 hours)
+            if time_diff.days == 0:
+                categories.append('today')
+            
+            # This week (last 7 days)
+            if time_diff.days < 7:
+                categories.append('week')
+            
+            # This month (last 30 days)
+            if time_diff.days < 30:
+                categories.append('month')
+            
+            # This year (last 365 days)
+            if time_diff.days < 365:
+                categories.append('year')
+            
+            # Overall
+            categories.append('overall')
+            
+            return categories
+            
+        except Exception as e:
+            print(f"Error parsing date {commit_date_str}: {e}")
+            return ['overall']
     
     def analyze_repositories(self):
         """Analyze all repositories and gather statistics"""
-        print(f"Analyzing repositories for {self.username}...")
+        print(f"Starting analysis for user: {self.username}")
         
-        repos = self.get_repositories()
-        print(f"Found {len(repos)} repositories to analyze")
+        repos = self.get_user_repos()
         
-        for repo in repos[:20]:  # Limit to prevent rate limiting
-            print(f"Analyzing {repo['full_name']}...")
+        # Limit to most recently updated repos to avoid rate limiting
+        active_repos = sorted(repos, key=lambda x: x.get('updated_at', ''), reverse=True)[:30]
+        
+        for i, repo in enumerate(active_repos):
+            repo_name = repo['full_name']
+            print(f"Analyzing repository {i+1}/{len(active_repos)}: {repo_name}")
             
-            commits = self.get_commits_for_repo(repo['full_name'])
+            if repo.get('size', 0) == 0:  # Skip empty repos
+                continue
+            
+            commits = self.get_commit_activity(repo_name)
             print(f"Found {len(commits)} commits in {repo['name']}")
             
             for commit in commits:
-                commit_date = commit['commit']['author']['date']
-                categories = self.categorize_by_time(commit_date)
+                categories = self.categorize_by_time(commit['date'])
+                stats = commit['stats']
                 
-                # Get detailed commit stats
-                commit_stats = self.get_commit_stats(repo['full_name'], commit['sha'])
-                
-                # Update stats for each applicable time period
                 for category in categories:
-                    self.stats[category]['additions'] += commit_stats['additions']
-                    self.stats[category]['deletions'] += commit_stats['deletions']
+                    self.stats[category]['additions'] += stats['additions']
+                    self.stats[category]['deletions'] += stats['deletions']
                     self.stats[category]['commits'] += 1
+    
+    def format_number(self, num):
+        """Format number with commas for readability"""
+        return f"{num:,}"
     
     def generate_stats_table(self):
         """Generate markdown table with statistics"""
+        current_time = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S UTC')
+        
         table = """## Coding Statistics 📊
 
 | Period | Lines Added | Lines Removed | Net Lines | Commits |
@@ -184,10 +209,10 @@ class GitHubStatsGenerator:
             net_lines = stats['additions'] - stats['deletions']
             net_sign = '+' if net_lines >= 0 else ''
             
-            table += f"\n| {label} | {stats['additions']:,} | {stats['deletions']:,} | {net_sign}{net_lines:,} | {stats['commits']:,} |"
+            row = f"| {label} | {self.format_number(stats['additions'])} | {self.format_number(stats['deletions'])} | {net_sign}{self.format_number(net_lines)} | {self.format_number(stats['commits'])} |"
+            table += f"\n{row}"
         
-        table += f"\n\n*Last updated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S UTC')}*\n"
-        
+        table += f"\n\n*Last updated: {current_time}*\n"
         return table
     
     def update_readme(self):
@@ -196,57 +221,74 @@ class GitHubStatsGenerator:
         
         if not os.path.exists(readme_path):
             print("README.md not found!")
-            return
+            return False
         
         with open(readme_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # Generate new stats table
         new_stats = self.generate_stats_table()
         
-        # Find and replace existing stats section or add new one
-        stats_pattern = r'## Coding Statistics 📊.*?(?=\n##|\n\[|$)'
+        # Pattern to match existing stats section
+        stats_pattern = r'## Coding Statistics 📊.*?(?=\n## |\n\[|\Z)'
         
         if re.search(stats_pattern, content, re.DOTALL):
-            # Replace existing stats
+            # Replace existing stats section
             content = re.sub(stats_pattern, new_stats.rstrip(), content, flags=re.DOTALL)
+            print("Updated existing statistics section")
         else:
-            # Add stats after Github Languages and Status section
-            github_stats_pattern = r'(## Github Languages and Status.*?</p>)'
-            if re.search(github_stats_pattern, content, re.DOTALL):
+            # Insert after Github Languages and Status section
+            insert_pattern = r'(## Github Languages and Status.*?</p>)'
+            if re.search(insert_pattern, content, re.DOTALL):
                 content = re.sub(
-                    github_stats_pattern, 
+                    insert_pattern, 
                     r'\1\n\n' + new_stats, 
                     content, 
                     flags=re.DOTALL
                 )
+                print("Added new statistics section after Github stats")
             else:
-                # Add at the end before blog posts
+                # Insert before Top Blog Posts section
                 blog_pattern = r'(## Top Blog Posts)'
-                content = re.sub(blog_pattern, new_stats + r'\n\1', content)
+                if blog_pattern in content:
+                    content = content.replace('## Top Blog Posts', new_stats + '\n## Top Blog Posts')
+                    print("Added new statistics section before blog posts")
+                else:
+                    print("Could not find suitable location to insert stats")
+                    return False
         
         with open(readme_path, 'w', encoding='utf-8') as f:
             f.write(content)
         
         print("README.md updated successfully!")
+        return True
     
     def run(self):
         """Main execution method"""
-        if not self.token or not self.username:
-            print("Error: GITHUB_TOKEN and GITHUB_USERNAME environment variables required")
+        if not self.token:
+            print("Error: GITHUB_TOKEN environment variable is required")
             return
+        
+        print("🚀 Starting GitHub Coding Statistics Generator")
+        print(f"📊 Analyzing repositories for: {self.username}")
         
         try:
             self.analyze_repositories()
-            self.update_readme()
             
-            print("\nFinal Statistics:")
+            print("\n📈 Final Statistics Summary:")
             for period, stats in self.stats.items():
-                print(f"{period.capitalize()}: {stats['commits']} commits, "
-                      f"+{stats['additions']} -{stats['deletions']} lines")
+                net = stats['additions'] - stats['deletions']
+                print(f"  {period.capitalize()}: {stats['commits']} commits, "
+                      f"+{stats['additions']} -{stats['deletions']} = {net:+} net lines")
+            
+            success = self.update_readme()
+            
+            if success:
+                print("\n✅ Process completed successfully!")
+            else:
+                print("\n❌ Failed to update README.md")
                 
         except Exception as e:
-            print(f"Error: {e}")
+            print(f"❌ Error during execution: {e}")
             import traceback
             traceback.print_exc()
 
