@@ -57,24 +57,18 @@ Longer pieces live on [doshidhruv.com](https://doshidhruv.com).
 **Observability** — OpenTelemetry, Vector, Fluent Bit, Kubernetes, Terraform, AWS  
 **Governance** — IAM, OAuth/OIDC, zero trust, ADRs, AI governance
 
-## GitHub
+## Activity
+
+Public GitHub activity, redrawn every day and stored in this repo so the profile does not depend on a live stats service.
 
 <p>
-  <img alt="Dhruv Doshi's most used languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=DhruvDoshi&layout=compact&theme=transparent&langs_count=8&hide_border=true&title_color=111111&text_color=444444&icon_color=111111" width="42%" />
-  <img alt="Dhruv Doshi's GitHub stats" src="https://github-readme-stats.vercel.app/api?username=DhruvDoshi&show_icons=true&hide_border=true&theme=transparent&count_private=true&title_color=111111&text_color=444444&icon_color=111111" width="54%" />
+  <img alt="GitHub stats" src="./profile/stats.svg" width="54%" />
+  <img alt="Most used languages" src="./profile/top-langs.svg" width="42%" />
 </p>
 
-## Coding Statistics 📊
-
-| Period | Lines Added | Lines Removed | Net Lines | Commits |
-|--------|-------------|---------------|-----------|---------|
-| Today | 487 | 136 | +351 | 3 |
-| This Week | 487 | 136 | +351 | 3 |
-| This Month | 7,812 | 139 | +7,673 | 6 |
-| This Year | 11,826 | 832 | +10,994 | 20 |
-| Overall | 11,826 | 832 | +10,994 | 20 |
-
-*Last updated: 2025-06-07 20:58:51 UTC*
+<p>
+  <img alt="Contribution streak" src="./profile/streak.svg" width="100%" />
+</p>
 
 ## Elsewhere
 
