@@ -1,56 +1,67 @@
-# Hi there, I'm [Dhruv Doshi][website] 👋
+# [Dhruv Doshi](https://doshidhruv.com)
 
-## I'm a Learner, Student, Freelancer, Developer, and Tutor!
-- 🌱 I’m currently learning everything
-- 👯 I’m looking to collaborate with other content creators
-- 🥅 2025 Goals: Finish my Trading Engine
-- ⚡ Fun fact: I love to watch cricket and hate instagram
+**Staff Software Developer & Enterprise Architect** · Toronto
 
-## Languages and Tools
+My work sits where AI systems, distributed platforms, observability, and enterprise architecture meet. I stay close to the code and build the infrastructure, controls, and platforms that turn complex technical ideas into dependable production systems.
 
+[doshidhruv.com](https://doshidhruv.com) · [Experience](https://doshidhruv.com/resume) · [Work](https://doshidhruv.com/projects) · [Notes](https://doshidhruv.com/notes) · [Guides](https://doshidhruv.com/guides) · [work@doshidhruv.com](mailto:work@doshidhruv.com)
 
-<p float ="left">
-    <img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png">
-    <img height="20" src="https://avatars.githubusercontent.com/u/27804?s=200&v=4">
-    <img height="20" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/flaskLogo.3d30c4e3.png">
-    <img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/jupyter-notebook/jupyter-notebook.png">
-    <img height="20" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/tensorflow-seeklogo.com.svg">
-    <img height="20" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/pandas-svgrepo-com.svg">
-    <img height="20" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/pipr-removebg-preview.png">
-    <img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/ethereum/ethereum.png">
-    <img height="20" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/truffle-seeklogo.com.svg">
-    <img height="20" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/ganache-seeklogo.com.svg">
-    <img height="20" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/metamask-seeklogo.com.svg">
-    <img height="20" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/pipr-removebg-preview.png">
-    <img height="20" src="https://raw.githubusercontent.com/github/explore/180320cffc25f4ed1bbdfd33d4db3a66eeeeb358/topics/cpp/cpp.png">
-    <img height="20" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/java-svgrepo-com.svg">
-    <img height="20" src="https://raw.githubusercontent.com/github/explore/8ab0be27a8c97992e4930e630e2d68ba8d819183/topics/spring/spring.png">
-    <img height="20" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/ruby-svgrepo-com.svg">
-    <img height="25" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/go-svgrepo-com.svg">
-    <img height="20" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/pipr-removebg-preview.png">
-    <img height="20" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/git-svgrepo-com.svg">
-    <img height="20" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/microsoft-azure-seeklogo.com.svg">
-    <img height="20" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/png-transparent-amazon-com-logo-amazon-web-services-amazon-elastic-compute-cloud-amazon-virtual-private-cloud-cloud-computing-text-orange-logo-removebg-preview.png">
-    <img height="20" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/google-cloud-svgrepo-com.svg">
-    <img height="20" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/docker-svgrepo-com.svg">
-    <img height="20" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/kubernetes-svgrepo-com.svg">
-    <img height="20" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/pipr-removebg-preview.png">
-    <img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png">
-    <img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/typescript/typescript.png">
-    <img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png">    
-    <img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png">
-    <img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/vue/vue.png">
-    <img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/angular/angular.png">
-    <img height="20" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/p5js.svg">
+## Now
 
-</p>
+At [Royal Bank of Canada](https://doshidhruv.com/resume) I design and ship enterprise platforms across architecture automation, observability, cloud infrastructure, and responsible AI.
 
+| | |
+| --- | --- |
+| **1,000+** | architecture patterns mapped into a production recommendation platform |
+| **150 TB/day** | institutional log volume designed for vendor-neutral routing |
+| **10,000+** | systems covered by a shared observability architecture |
+| **20+ teams** | enabled through OpenTelemetry schemas and onboarding standards |
 
-## Github Languages and Status
+## Selected work
 
-<p float ="left">
-    <img alt="Dhruv Doshi Github Stats" src="https://github-readme-stats.vercel.app/api/top-langs/?username=DhruvDoshi&layout=compact&theme=vue-dark&langs_count=8&hide_border=true" color="black" width="40%"/><!-- .element height="50%" width="50%" -->
-    <img alt="Github" src="https://github-readme-stats.vercel.app/api?username=DhruvDoshi&show_icons=true&hide_border=true&theme=vue-dark&show_icons=true&count_private=true" color="black" width="55%"/>
+**[Architecture Solution Blueprint platform](https://doshidhruv.com/projects#architecture-blueprints)** · RBC  
+Zero-to-one platform that turns 1,000+ architecture patterns into real-time service recommendations, solution blueprints, and automated architecture workflows. TypeScript, React, Node.js.
+
+**[Vendor-neutral observability platform](https://doshidhruv.com/projects#observability-platform)** · RBC  
+OpenTelemetry and telemetry routing designed for about 150 TB/day across 10,000+ systems, so teams can collect and route telemetry without locking to one vendor. OpenTelemetry, Kafka, Vector, Fluent Bit.
+
+**[ASB Assist](https://doshidhruv.com/projects#asb-assist)** · RBC  
+LLM and RAG assistant that turns natural-language requirements into architecture recommendations and diagrams, with retrieval, tool use, evaluation, grounding, and auditable workflows. Python, LLMs, RAG.
+
+**[Healthcare verification platform](https://doshidhruv.com/projects#health-platform)** · HealthCard  
+First engineer on an acquired startup. Built the React and TypeScript client, Node.js APIs, verification workflows, and AWS EKS deployment in a regulated healthcare environment.
+
+## Writing
+
+Longer pieces live on [doshidhruv.com](https://doshidhruv.com).
+
+**Guides**
+
+- [AI governance for software systems](https://doshidhruv.com/guides/ai-governance)
+- [Observability systems](https://doshidhruv.com/guides/observability-systems)
+- [Platform architecture](https://doshidhruv.com/guides/platform-architecture)
+- [Staff engineering practice](https://doshidhruv.com/guides/staff-engineering-practice)
+- [Cloud migration](https://doshidhruv.com/guides/cloud-migration)
+
+**Recent notes**
+
+- [Measure whether an internal platform creates leverage](https://doshidhruv.com/notes/measure-whether-an-internal-platform-creates-leverage) · Jul 2026
+- [OpenTelemetry pipeline architecture for vendor-neutral observability](https://doshidhruv.com/notes/opentelemetry-pipeline-architecture-for-vendor-neutral-observability) · Apr 2026
+- [Production RAG requires retrieval evidence and control](https://doshidhruv.com/notes/production-rag-requires-retrieval-evidence-and-control) · Feb 2026
+- [FINOS CALM and architecture as code](https://doshidhruv.com/notes/finos-calm-and-architecture-as-code) · Jan 2026
+
+## Engineering scope
+
+**AI systems** — LLM systems, RAG, agents, MCP, evaluation, guardrails, Python  
+**Platforms** — Kafka, TypeScript, Node.js, Go, PostgreSQL, Redis  
+**Observability** — OpenTelemetry, Vector, Fluent Bit, Kubernetes, Terraform, AWS  
+**Governance** — IAM, OAuth/OIDC, zero trust, ADRs, AI governance
+
+## GitHub
+
+<p>
+  <img alt="Dhruv Doshi's most used languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=DhruvDoshi&layout=compact&theme=transparent&langs_count=8&hide_border=true&title_color=111111&text_color=444444&icon_color=111111" width="42%" />
+  <img alt="Dhruv Doshi's GitHub stats" src="https://github-readme-stats.vercel.app/api?username=DhruvDoshi&show_icons=true&hide_border=true&theme=transparent&count_private=true&title_color=111111&text_color=444444&icon_color=111111" width="54%" />
 </p>
 
 ## Coding Statistics 📊
@@ -65,38 +76,6 @@
 
 *Last updated: 2025-06-07 20:58:51 UTC*
 
+## Elsewhere
 
-
-## Top Blog Posts
- - [Complete Information about Cloud Computing](https://dhruvdoshi.github.io/blog/2021/02/25/what-is-cloud-computing)
- - [Complete Information about Cryptocurrency](https://dhruvdoshi.github.io/blog/2021/01/31/what-is-cryptocurrency)
- - [Introduction to Blockchain](https://dhruvdoshi.github.io/blog/2019/08/31/what-is-blockchain)
-
-
-## Connect with me:
-
-[<img align="left" alt="dhruvdoshi.github.io" width="20px" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/about-svgrepo-com.svg" />][website]
-[<img align="left" alt="DhruvDoshi | YouTube" width="20px" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/youtube-svgrepo-com-2.svg" />][youtube]
-[<img align="left" alt="DhruvDoshi | Twitter" width="20px" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/twitter-svgrepo-com.svg" />][twitter]
-[<img align="left" alt="DhruvDoshi | LinkedIn" width="20px" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/linkedin-svgrepo-com.svg" />][linkedin]
-[<img align="left" alt="DhruvDoshi | Quora" width="20px" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/quora-svgrepo-com.svg" />][quora]
-[<img align="left" alt="DhruvDoshi | Google" width="20px" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/google-scholar-svgrepo-com.svg" />][google-scholar]
-[<img align="left" alt="DhruvDoshi | Research" width="20px" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/researchgate-svgrepo-com.svg" />][research-gate]
-[<img align="left" alt="DhruvDoshi | Blogs" width="20px" src="https://github.com/DhruvDoshi/DhruvDoshi/blob/master/assets/images/blogging-writer-svgrepo-com.svg" />][blogs]
-
-
-
-
-
-
-
-[website]: https://dhruvdoshi.github.io
-[twitter]: https://twitter.com/dhruv25071999
-[youtube]: https://www.youtube.com/channel/UC6WDZo0Eleak3VGdi8kSR1Q
-[linkedin]: https://linkedin.com/in/dhruvdoshi25071999/
-[quora]: https://www.quora.com/profile/Dhruv-Doshi-18
-[google-scholar]: https://scholar.google.com/citations?user=Ri3ZDcIAAAAJ&hl=en
-[research-gate]: https://www.researchgate.net/profile/Dhruv-Doshi-4
-[blogs]: https://dhruvdoshi.github.io/blog
-
-
+[Site](https://doshidhruv.com) · [LinkedIn](https://www.linkedin.com/in/dhruvdoshi25071999) · [Google Scholar](https://scholar.google.com/citations?user=Ri3ZDcIAAAAJ&hl=en) · [Research](https://doshidhruv.com/research) · [About](https://doshidhruv.com/about)
