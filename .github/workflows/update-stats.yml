@@ -1,4 +1,4 @@
-name: Update profile activity cards
+name: Update coding statistics
 
 on:
   schedule:
@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  cards:
+  stats:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -14,34 +14,20 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Generate stats card
-        uses: stats-organization/github-readme-stats-action@v2
+      - uses: actions/setup-python@v5
         with:
-          card: stats
-          fail_on_error: true
-          path: profile/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-          options: username=${{ github.repository_owner }}&show_icons=true&hide_border=true&hide_rank=true&include_all_commits=true&bg_color=ffffff&title_color=111111&text_color=444444&icon_color=111111&border_radius=12
+          python-version: "3.12"
 
-      - name: Generate languages card
-        uses: stats-organization/github-readme-stats-action@v2
-        with:
-          card: top-langs
-          fail_on_error: true
-          path: profile/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-          options: username=${{ github.repository_owner }}&layout=compact&langs_count=8&hide_border=true&bg_color=ffffff&title_color=111111&text_color=444444&border_radius=12
+      - name: Refresh the statistics table
+        env:
+          GITHUB_TOKEN: ${{ secrets.STATS_TOKEN || secrets.GITHUB_TOKEN }}
+          GITHUB_USERNAME: DhruvDoshi
+        run: python .github/scripts/update_stats.py
 
-      - name: Generate streak card
-        uses: DenverCoder1/github-readme-streak-stats@v1
-        with:
-          path: profile/streak.svg
-          options: user=${{ github.repository_owner }}&hide_border=true&background=FFFFFF&stroke=E6E6E6&ring=111111&fire=111111&currStreakLabel=111111&currStreakNum=111111&sideLabels=666666&sideNums=333333&dates=888888&disable_animations=true
-
-      - name: Commit cards
+      - name: Commit statistics
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add profile/*.svg
-          git commit -m "Update profile activity cards" || exit 0
+          git add README.md
+          git commit -m "Update coding statistics" || exit 0
           git push
